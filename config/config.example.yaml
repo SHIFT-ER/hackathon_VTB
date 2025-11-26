@@ -1,0 +1,20 @@
+source:
+  host: localhost
+  port: 5432
+  dbname: source_db
+  user: admin
+  password: secret
+
+target:
+  host: localhost
+  port: 5432
+  dbname: target_db
+  user: admin
+  password: secret
+
+migration:
+  threads: 4
+  include_schemas:
+    - public
+  exclude_tables:
+    - logs
